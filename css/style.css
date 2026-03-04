@@ -39,22 +39,6 @@ header {
         font-size: 2rem;
     }
 }
-.names{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    background-color: #495057;
-    p{
-        font-size: 1.5rem;
-        width: 300px;
-        text-align: center;
-        color: white;
-    }
-}
-
 main {
     width: 100%;
     padding: 50px 0;
@@ -74,15 +58,17 @@ main {
     color: white;
     background-color: white;
     text-align: center;
-    clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%);
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
     position: relative;
     transition: 0.3s ease;
+    filter: brightness(0.6);
     h2{
         color: white;
     }  
 }
 .cards:hover{
     transform: scale(1.1);
+    filter: brightness(1.0);
 }
 
 /* gestion des images des cards */
