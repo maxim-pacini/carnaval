@@ -110,13 +110,55 @@ button{
         margin-bottom: 25px;
         border-radius: 15px;
         backdrop-filter: blur(10px);
+        opacity: 0;
         h2{
             padding: 15px;
-            color: black;
+            color: white;
         }
     }
 }
+/* button div:before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: black; permet d'avoir une bordure avec un élément de derrière
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+    z-index: 0;
+} */
+/* animation du survol de la carte */
+button:hover{
+    transform: scale(1.1);
+    filter: brightness(1);
+    cursor: pointer;
+    transition: 0.4s ease;
+}
 
+/* Manière 1 */
+/* button:hover div {
+    opacity: 1;
+    transition: 0.4s ease;
+} */
+/* manière 2 avec un truc en plus */
+button:hover div{
+    animation: fadeInTitle 0.4s ease forwards;
+}
+@keyframes fadeInTitle {
+    from {
+        opacity: 0;
+        margin-bottom: -150px;
+    }
+    to {
+        opacity: 1;
+        margin-bottom: 25px;
+    }
+}
+
+
+
+
+
+
+/* Definition des cartes */
 .binche{
     background: url(./../medias/images/binche2.jpg);
     background-size: cover;
@@ -130,9 +172,9 @@ button{
     background-position-y: 50%;
 }
 .rio{
-    background: url(./../medias/images/rio.jpg);
+    background: url(./../medias/images/rio2.png);
     background-size: cover;
-    background-position-x: 50%;
+    background-position-x: 46%;
     background-position-y: 50%;
 }
 .venise{
@@ -143,8 +185,8 @@ button{
 }
 
 
-button:hover{
-    transform: scale(1.1);
-    filter: brightness(1);
-    cursor: pointer;
-}
+
+
+
+
+
