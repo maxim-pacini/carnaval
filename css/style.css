@@ -1,13 +1,21 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    font-family: new;
 }
-
 @font-face {
     font-family: new;
-    src: url(./../font/Titan_One/TitanOne-Regular.ttf);
+    src: url(./../font/lazy_dog.ttf);
+
 }
+@font-face {
+    font-family: new2;
+    src: url(./../font/Grotesk/AlteHaasGroteskRegular.ttf);
+
+}
+/* couleurs sympa */
+/* #dd5151 */
+
+
 
 header {
     width: 100%;
@@ -15,64 +23,118 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #212529;
     color: white;
+    background-color: #fde9e0;
+    font-family: new2;
     h1{
-        font-size: 3rem;
+        font-size: 80px;
+        text-shadow: 2px 2px 5px black;
     }
 }
 .head{
     text-align: center;
-    background-color: #343a40;
+    background-color: #ffe4c4;
     height: 50px;
     line-height: 50px;
     color: white;
-}
-
-.title{
-    width: 100%;
-    background-color: #495057;
-    padding: 20px 0;
-    h2{
-        margin-left: 18%;
-        color: white;
-        font-size: 2rem;
-    }
+    font-family: new2;
 }
 main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    color: white;
+    font-family: new2;
+}
+.box-defil{
     width: 100%;
-    padding: 50px 0;
+    height: 30px;
+    text-align: center;
+    background-color: #f2f2f2;
+    color: black;
+    line-height: 30px;
+}
+
+/* Animation défilement freeze */
+
+/* .defil{
+    font-size: 20px;
+    line-height: 30px;
+    position: absolute;
+    font-family: new2;
+    animation: defilement 8s infinite linear;
+} */
+/* Animation qui ne fonctionne pas correctement car elle agrandi la page */
+/* @keyframes defilement {
+    from{
+        transform:translate3d(100%,0,0);
+    }
+    to{
+        transform:translate3d(-100%,0,0);
+    }
+} */
+/* sous titre + son animation */
+.content-header{
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background-color: #fde9e0;
+    border-radius: 15px;
+
+    
+    h2{
+        color: black;
+        font-size: 3rem;
+        animation: changeColor 10s infinite linear;
+    }
+}
+
+
+.content-header h2{
+    background-image: url(./../medias/images/plume2.avif);
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* @keyframes changeColor {
+    0%{color: red;}
+    33%{color: blue;}
+    66%{color: green;}
+    100%{color: black;} 
+} */
+
+
+
+
+
+
+/* contenu de la page */
+.content-content{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 25px;
-    background-color: #495057;
-}
-
-/* a relire */
-.cards {
-    width: 300px;
-    height: 400px;
-    overflow: hidden;
-    text-decoration: none;
-    color: white;
-    background-color: white;
-    text-align: center;
-    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
-    position: relative;
-    transition: 0.3s ease;
-    filter: brightness(0.6);
+    gap: 1px;
+    padding: 50px;
     h2{
-        color: white;
-    }  
+        color: black;
+    }
 }
-.cards:hover{
-    transform: scale(1.1);
-    filter: brightness(1.0);
+.cards{
+    clip-path: polygon(15% 0,100% 0,85% 100%,0 100%);
+    height: 400px;
+    width: 300px;
 }
-
-/* gestion des images des cards */
-
+.card-name div h2{
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px black;
+}
 .binche img{
     width: 100%;
     height: 100%;
@@ -85,6 +147,46 @@ main {
     object-fit: cover;
     object-position: center;
 }
+/* titre drapeau */
+.binche div h2 span:nth-child(1){
+    color: black;
+}
+.binche div h2 span:nth-child(2){
+    color: yellow;
+}
+.binche div h2 span:nth-child(3){
+    color: red;
+}
+
+.nice div h2 span:nth-child(1){
+    color: #072654;
+}
+.nice div h2 span:nth-child(2){
+    color: white;
+}
+.nice div h2 span:nth-child(3){
+    color: red;
+}
+
+.rio div h2 span:nth-child(2){
+    color: #FBDE17;
+}
+.rio div h2 span:nth-child(1){
+    color: #1C9C3B;
+}
+.rio div h2 span:nth-child(3){
+    color: #1C9C3B;
+}
+.venise div h2 span:nth-child(1){
+    color: #20A262;
+}
+.venise div h2 span:nth-child(2){
+    color: white;
+}
+.venise div h2 span:nth-child(3){
+    color: #D51920;
+}
+/* dimensions des cartes */
 .rio img{
     width: 100%;
     height: 100%;
@@ -96,4 +198,105 @@ main {
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+/* Cartes */
+
+button{
+    height: 400px;
+    width: 300px;
+    clip-path: polygon(15% 0,100% 0,85% 100%,0 100%);
+    border: none;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    filter: brightness(0.6);
+    transition: all 0.3s ease;
+    font-family: new;
+    div{
+        clip-path: polygon(15% 0,100% 0,85% 100%,0 100%);
+        width: 60%;
+        margin-bottom: 25px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        opacity: 0;
+        h2{
+            padding: 15px;
+            color: white;
+        }
+    }
+}
+/* button div:before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: black; permet d'avoir une bordure avec un élément de derrière
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+    z-index: 0;
+} */
+/* animation du survol de la carte */
+button:hover{
+    transform: scale(1.1);
+    filter: brightness(1);
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+
+/* Manière 1 */
+/* button:hover div {
+    opacity: 1;
+    transition: 0.4s ease;
+} */
+/* manière 2 avec un truc en plus */
+button:hover div{
+    animation: popup 0.4s ease forwards;
+}
+@keyframes popup {
+    from {
+        opacity: 0;
+        margin-bottom: -150px;
+    }
+    to {
+        opacity: 1;
+        margin-bottom: 25px;
+    }
+}
+
+/* Definition des cartes */
+.binche{
+    background: url(./../medias/images/binche2.jpg);
+    background-size: cover;
+    background-position-x: 80%;
+    background-position-y: 50%;
+}
+.nice{
+    background: url(./../medias/images/nice.jpg);
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
+}
+.rio{
+    background: url(./../medias/images/rio2.png);
+    background-size: cover;
+    background-position-x: 46%;
+    background-position-y: 50%;
+}
+.venise{
+    background: url(./../medias/images/venise.jpg);
+    background-size: cover;
+    background-position-x: 80%;
+    background-position-y: 50%;
+}
+
+/* Footer */
+
+footer{
+    text-align: center;
+    padding: 50px;
+    width: 95%;
+    border-top: 2px solid #E5E5E5;
+    margin: 0 auto;
+    h3{
+        font-size: 2rem;
+    }
 }
