@@ -77,7 +77,8 @@ main {
 } */
 /* sous titre + son animation */
 .content-header{
-    width: 100%;
+    width: 65%;
+    margin: 0 auto;
     text-align: center;
     padding: 15px;
     background-color: #fde9e0;
@@ -117,7 +118,7 @@ main {
 
 /* contenu de la page */
 .content{
-    width: 67%;
+    width: 100%;
 }
 .content-content{
     display: flex;
@@ -376,16 +377,22 @@ footer{
 .venise-defil{
     background-color: #9D4EDD;
 }
+.venise-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .venise-content-header{
+    width: 65%;
     background-color: #C77DFF;
 }
 .venise-content-content{
     background-color: red;
     flex-wrap: wrap;
-    width: 60%;
-    margin: 0 auto;
+    width: 80%;
     gap: 50px;
-    min-width: 90%;
+    
 }
 .venise-cards{
     width: 300px;
