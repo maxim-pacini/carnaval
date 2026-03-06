@@ -116,6 +116,9 @@ main {
 
 
 /* contenu de la page */
+.content{
+    width: 67%;
+}
 .content-content{
     display: flex;
     align-items: center;
@@ -287,16 +290,113 @@ button:hover div{
     background-position-x: 80%;
     background-position-y: 50%;
 }
+.return{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    a{
+        text-decoration: none;
+        color: black;
+        animation: rainbow2 15s infinite;
+        text-shadow: 2px 2px 7px black;
+        div{
+            margin-left: 60px;
+            background-color: white;
+            height: 60px;
+            width: 150px;
+            text-align: center;
+            line-height: 56px;
+            border-radius: 15px;
+            border: 1px solid black;
+            animation: rainbow 15s infinite;
+            font-weight: bold;
+            box-shadow: 2px 2px 5px black;
+            }
+        }
+}
+
+
+@keyframes rainbow {
+    0%{border: 3px solid #fc0303;}
+    10%{border: 3px solid #fc4103;}
+    20%{border: 3px solid #fc9803;}
+    30%{border: 3px solid #73fc03;}
+    40%{border: 3px solid #03fc3d;}
+    50%{border: 3px solid #03fcf4;}
+    60%{border: 3px solid #036bfc;}
+    70%{border: 3px solid #2c03fc;}
+    80%{border: 3px solid #8c03fc;}
+    90%{border: 3px solid #fc03fc;}
+    100%{border: 3px solid #fc0345;}
+    
+}
+@keyframes rainbow2 {
+    0%{color: #fc0303;}
+    10%{color: #fc4103;}
+    20%{color: #fc9803;}
+    30%{color: #73fc03;}
+    40%{color: #03fc3d;}
+    50%{color: #03fcf4;}
+    60%{color: #036bfc;}
+    70%{color: #2c03fc;}
+    80%{color: #8c03fc;}
+    90%{color: #fc03fc;}
+    100%{color: #fc0345}
+    
+}
 
 /* Footer */
 
 footer{
     text-align: center;
+    background-color: #f2f2f2;
     padding: 50px;
-    width: 95%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
     border-top: 2px solid #E5E5E5;
     margin: 0 auto;
     h3{
         font-size: 2rem;
     }
+}
+.venise-footer{
+    position: initial;
+}
+
+
+/* VENISE PAGE */
+
+.venise-header{
+    background-color: #7B2CBF;
+    color: #fde9e0;
+}
+.venise-defil{
+    background-color: #9D4EDD;
+}
+.venise-content-header{
+    background-color: #C77DFF;
+}
+.venise-content-content{
+    background-color: red;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 0 auto;
+    gap: 50px;
+    min-width: 90%;
+}
+.venise-cards{
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    
+    
+}
+.venise-cards:nth-child(1){
+        background: url(./../medias/images/galve1.jpeg);
+}
+.venise-cards:nth-child(2){
+        background: url(./../medias/images/galve2.jpg);
 }
