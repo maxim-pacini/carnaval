@@ -214,7 +214,7 @@ button{
     display: flex;
     align-items: end;
     justify-content: center;
-    filter: brightness(0.6);
+    filter: brightness(0.4);
     transition: all 0.3s ease;
     font-family: new;
     div{
@@ -366,6 +366,39 @@ footer{
 .venise-footer{
     position: initial;
 }
+/* BINCHE PAGE */
+
+.binche-defil{
+
+}
+
+
+
+.binche-content-content{
+    background-color: red;
+    width: 65%;
+    margin: 50px auto;
+}
+.binche-text{
+    text-align: center;
+    p{
+        margin-bottom: 30px;
+    }
+}
+.binche-text h2{
+    text-align: start;
+    padding-left: 10px;
+    border-left: 2px solid yellow;
+    margin-bottom: 20px;
+
+}
+
+
+
+
+
+
+
 
 
 /* VENISE PAGE */
@@ -388,22 +421,46 @@ footer{
     background-color: #C77DFF;
 }
 .venise-content-content{
-    background-color: red;
+    background-color: purple;
     flex-wrap: wrap;
-    width: 80%;
+    width: 60%;
     gap: 50px;
     
 }
 .venise-cards{
     width: 300px;
-    height: 200px;
+    height: 250px;
     border-radius: 15px;
-    
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    flex-wrap: wrap;
 }
-.venise-cards:nth-child(1){
+.venise-cards-img{
+    background-color: red;
+    height: 80%;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+.venise-cards-legends{
+    background-color: #072654;
+    height: 20%;
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+
+}
+
+.venise-cards-legends p{
+    text-align: center;
+    line-height: 50px;
+}
+
+.venise-cards .venise-cards-img:nth-child(1){
         background: url(./../medias/images/galve1.jpeg);
+        background-size: cover;
 }
-.venise-cards:nth-child(2){
+.venise-cards .venise-cards-img:nth-child(2){
         background: url(./../medias/images/galve2.jpg);
+        background-color: cover;
 }
